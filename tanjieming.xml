@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<characters>
+<character>
+<name>John Doe</name>
+<age>35</age>
+<gender>Male</gender>
+<height>180 cm</height>
+</character>
+<character>
+<name>Jane Smith</name>
+<age>28</age>
+<gender>Female</gender>
+<height>165 cm</height>
+</character>
+<character>
+<name>Alice Johnson</name>
+<age>24</age>
+<gender>Female</gender>
+<height>170 cm</height>
+</character>
+</characters>
