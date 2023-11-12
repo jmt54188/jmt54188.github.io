@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<link rel=icon href=cat3.jpg type=image/jpg>
+<meta name=viewport content=width=device-width, initial-scale=1.0>
+<head>
+<!-- Add any necessary head content, styles, or scripts here -->
+</head>
+<body>
+<!-- Add a table element with an ID 'favoriteCharacters' where you want the table to appear -->
+<table id="favoriteCharacters">
+<tr>
+<th>Number</th>
+<th>Name</th>
+<th>Age</th>
+<th>Gender</th>
+<th>Height</th>
+</tr>
+</table>
+<script>
+const table = document.getElementById('favoriteCharacters');
+        
+fetch('tanjieming.xml') 
+.then(response => response.text())
+.then(data => {
+const parser = new DOMParser();
+const xmlDoc = parser.parseFromString(data, 'text/xml');
+const characters = xmlDoc.getElementsByTagName('character');
+
+for (let i = 0; i < characters.length; i++) {
+const character = characters[i]
+const name = character.getElementsByTagName('name')[0].textContent;
+const age = character.getElementsByTagName('age')[0].textContent;
+const gender = character.getElementsByTagName('gender')[0].textContent;
+const height = character.getElementsByTagName('height')[0].textContent;
+
+const row = table.insertRow(i + 1);
+const numberCell = row.insertCell(0);
+const nameCell = row.insertCell(1);
+const ageCell = row.insertCell(2);
+const genderCell = row.insertCell(3);
+const heightCell = row.insertCell(4);
+
+numberCell.innerHTML = i + 1;
+nameCell.innerHTML = name;
+ageCell.innerHTML = age;
+genderCell.innerHTML = gender;
+heightCell.innerHTML = height;
+}
+})
+.catch(error => {
+console.error(error);
+});
+</script>
+</body>
+</html>
