@@ -1,0 +1,28 @@
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;}
+
+body {
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center; 
+background: #F1F4FD; }
+
+.slider {
+position: relative;
+width: 90%;
+overflow: hidden;}
+
+.images {
+display: flex;
+width: 90%;}
+
+.images img {
+height: 300px;
+width: 90%;
+transition: all 0.15s ease; }
+
+.images input {
+display: none; }
