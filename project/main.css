@@ -73,7 +73,7 @@ background: #fff9f9;
 display: block; }
 
 ul li ul li a {display:block !important;} 
-ul li ul li:hover {background: #F1F4FD;}
+ul li ul li:hover {background: #F1F4FD; height:10%;}
 
 .vl1 {
 border-left: 1px solid gray;
